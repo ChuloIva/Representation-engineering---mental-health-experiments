@@ -1,0 +1,89 @@
+import pytest
+import numpy as np
+import pandas as pd
+from unittest.mock import patch
+from plotly.graph_objects import Figure
+from LLM_agumented_therapy.Cogexp.Valence.liner_reg import go, np as np_module
+
+# File: LLM_agumented_therapy/Cogexp/Valence/test_liner_reg.ipynb
+
+@pytest.fixture
+def mock_data():
+    # Mock summary DataFrame
+    summary = pd.DataFrame({
+        "pair": ["Pair A", "Pair B", "Pair C"],
+        "slope": [0.5, -0.3, 0.8],
+        "intercept": [1.0, 0.5, -0.2],
+        "R2": [0.9, 0.7, 0.95],
+    })
+
+    # Mock df DataFrame
+    df = pd.DataFrame({
+        "pair": ["Pair A"] * 10 + ["Pair B"] * 10 + ["Pair C"] * 10,
+        "strength": list(range(10)) * 3,
+        "valence_norm": [x * 0.5 + 1.0 for x in range(10)] +
+                        [x * -0.3 + 0.5 for x in range(10)] +
+                        [x * 0.8 - 0.2 for x in range(10)],
+    })
+
+    return summary, df
+
+@patch.object(Figure, "show")
+def test_heatmap_and_slopes(mock_show, mock_data):
+    summary, df = mock_data
+
+    # Prepare data for the heatmap
+    heatmap_data = summary.sort_values("slope")
+
+    # Create the heatmap
+    heatmap = go.Heatmap(
+        z=heatmap_data["slope"].values.reshape(-1, 1),
+        x=["Slope (β₁)"],
+        y=heatmap_data["pair"],
+        colorscale="Viridis",
+        colorbar=dict(title="Slope (β₁)")
+    )
+
+    # Create large, overlapping color-coded slopes
+    slope_lines = []
+    x_range = np_module.linspace(df["strength"].min(), df["strength"].max(), 100)
+
+    # Normalize slope values for color mapping
+    slope_min = heatmap_data["slope"].min()
+    slope_max = heatmap_data["slope"].max()
+
+    for _, row in heatmap_data.iterrows():
+        y_pred = row["intercept"] + row["slope"] * x_range
+        normalized_slope = (row["slope"] - slope_min) / (slope_max - slope_min)  # Normalize slope for color
+        color = f"rgba({255 * (1 - normalized_slope):.0f}, {255 * normalized_slope:.0f}, 0, 0.6)"  # Gradient from red to green
+        slope_lines.append(
+            go.Scatter(
+                x=x_range,
+                y=y_pred,
+                mode="lines",
+                line=dict(color=color, width=3),
+                name=row["pair"],
+                showlegend=True  # Enable legend for comparison
+            )
+        )
+
+    # Combine heatmap and slope lines
+    fig = go.Figure(data=[heatmap] + slope_lines)
+
+    # Update layout for better readability
+    fig.update_layout(
+        title="Heatmap of Slope Changes with Large, Color-Coded Slopes",
+        xaxis=dict(title="Metric", tickfont=dict(size=12)),
+        yaxis=dict(title="Pair", tickfont=dict(size=10)),
+        height=800,  # Adjust height for better spacing
+        width=1000   # Adjust width to accommodate slopes
+    )
+
+    # Show the figure (mocked)
+    fig.show()
+
+    # Assertions
+    assert len(fig.data) == 4  # 1 heatmap + 3 slope lines
+    assert isinstance(fig.data[0], go.Heatmap)
+    assert all(isinstance(trace, go.Scatter) for trace in fig.data[1:])
+    assert fig.layout.title.text == "Heatmap of Slope Changes with Large, Color-Coded Slopes"
