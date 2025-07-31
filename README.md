@@ -55,6 +55,8 @@ Responses were evaluated using:
 
 ## Results
 
+![All metrics intrinsic vs extrinsic pairs](screens/image.png)
+
 ### Key Finding: Social Connection Dominates
 
 ![Community Best](screens/community%20best.png)
@@ -108,7 +110,6 @@ Regression analysis shows:
 
 **Key Insights:**
 1. **Intrinsic vs Extrinsic Motivation**: Vectors representing basic psychological needs (autonomy, competence, relatedness) consistently outperformed socially constructed goals
-2. **Dosage Effects**: Most interventions show optimal effects around 0.6-0.8x intensity, suggesting moderation is key
 3. **Robustness**: Social connection vectors maintain effectiveness across intensity ranges, suggesting fundamental importance
 
 ### Limitations and Considerations
