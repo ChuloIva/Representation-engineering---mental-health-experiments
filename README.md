@@ -106,10 +106,7 @@ The heatmap analysis reveals interesting patterns:
 **Self Determination Theory:**
 - Deci, E. L., & Ryan, R. M. (2000). “The What and Why of Goal Pursuits: Human Needs and the Self‑Determination of Behavior,” Psychological Inquiry, 11(4), 227‑268. Articulates basic psychological needs (autonomy, competence, relatedness).  ￼
 - Ryan, R. M., & Deci, E. L. (2017). Self‑Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness. Guilford Press. Updated integration of theory across domains.  
-￼
-**Key Insights:**
-1. **Intrinsic vs Extrinsic Motivation**: Vectors representing basic psychological needs (autonomy, competence, relatedness) consistently outperformed socially constructed goals
-3. **Robustness**: Social connection vectors maintain effectiveness across intensity ranges, suggesting fundamental importance
+
 
 ### Limitations and Considerations
 
@@ -142,6 +139,10 @@ The heatmap analysis reveals interesting patterns:
 ## Conclusion
 
 This exploration suggests that representation engineering can capture meaningful psychological distinctions that align with established mental health research. The dominance of social connection and meaning-making over external validation mirrors core findings in positive psychology and depression research.
+
+**Key Insights:**
+1. **Intrinsic vs Extrinsic Motivation**: Vectors representing basic psychological needs (autonomy, competence, relatedness) consistently outperformed socially constructed goals
+3. **Robustness**: Social connection vectors maintain effectiveness across intensity ranges, suggesting fundamental importance
 
 While these experiments should not be interpreted as clinical evidence, they demonstrate the potential for LLMs to serve as sophisticated cognitive models for exploring psychological interventions and mental health concepts.
 
