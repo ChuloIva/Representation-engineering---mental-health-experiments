@@ -90,13 +90,6 @@ The heatmap analysis reveals interesting patterns:
 - Socially constructed goals (Fame, Beauty, Competition) consistently underperform
 - Clear separation between intrinsic vs extrinsic motivation vectors
 
-![Regression Analysis](screens/regression%206%20plot.png)
-
-Regression analysis shows:
-- Most vectors peak around 0.6-0.8x intensity
-- Higher intensities often lead to degraded performance (model becomes too focused on the concept)
-- **Community/Engagement** maintains effectiveness even at higher intensities
-
 ![Combined Regression and Mean](screens/Plot%20reg%20and%20mean.png)
 
 ## Research Implications
@@ -107,7 +100,10 @@ Regression analysis shows:
 - Vazquez Alvarez et al. (2024): Meta-analysis showing social-connection interventions reduce depressive symptoms (SMD = -0.19)
 - Wickramaratne et al. (2022): Longitudinal studies consistently show social bonds predict lower depression risk. social connectedness is a “core determinant” of mental health, out-predicting many lifestyle factors.
 
-
+**Self Determination Theory:**
+•	Deci, E. L., & Ryan, R. M. (2000). “The What and Why of Goal Pursuits: Human Needs and the Self‑Determination of Behavior,” Psychological Inquiry, 11(4), 227‑268. Articulates basic psychological needs (autonomy, competence, relatedness).  ￼
+•	Ryan, R. M., & Deci, E. L. (2017). Self‑Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness. Guilford Press. Updated integration of theory across domains.  
+￼
 **Key Insights:**
 1. **Intrinsic vs Extrinsic Motivation**: Vectors representing basic psychological needs (autonomy, competence, relatedness) consistently outperformed socially constructed goals
 3. **Robustness**: Social connection vectors maintain effectiveness across intensity ranges, suggesting fundamental importance
@@ -126,10 +122,11 @@ Regression analysis shows:
 
 ## Future Directions
 
-1. **Orthogonalization Approaches**: Decompose complex therapeutic concepts into atomic components
-2. **Sentiment-Controlled Experiments**: Better separate conceptual content from emotional valence
-3. **Behavioral Micro-targeting**: Focus on specific behavioral patterns rather than broad therapeutic schools
-4. **Vector Arithmetic**: Explore combinations of basic psychological need vectors
+1. **LLMs as Cognitive Simulators for Hypothesis Testing**: Leverage language models to simulate and test psychological hypotheses in silico
+2. **Orthogonalization Approaches**: Decompose complex therapeutic concepts into atomic components
+3. **Sentiment-Controlled Experiments**: Better separate conceptual content from emotional valence
+4. **Behavioral Micro-targeting**: Focus on specific behavioral patterns rather than broad life concept
+5. **Vector Arithmetic**: Explore combinations of basic psychological need vectors
 
 ## Technical Details
 
