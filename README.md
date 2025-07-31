@@ -55,10 +55,13 @@ Responses were evaluated using:
 
 ## Results
 
+### First Finding: Intrinsic Motivation Outperforms Extrinsic Motivation
+
 ![All metrics intrinsic vs extrinsic pairs](screens/image.png)
 
-### Key Finding: Social Connection Dominates
+**Intrinsic vs Extrinsic Motivation**: Vectors representing basic psychological needs (autonomy, competence, relatedness) consistently outperformed socially constructed goals. This suggests that interventions targeting intrinsic motivators—such as fostering a sense of belonging, mastery, and autonomy—are more effective at improving mood and adaptive thinking in LLM outputs than those focused on extrinsic or socially constructed goals like fame or appearance. The results reinforce the importance of self-determination theory in both human and model-based interventions, highlighting that addressing core psychological needs yields more robust and generalizable improvements.
 
+### Second Finding: Social Connection Dominates
 ![Community Best](screens/community%20best.png)
 
 The **Alienation/Isolation vs Community/Engagement** vector emerged as the most effective intervention, showing:
@@ -101,8 +104,8 @@ The heatmap analysis reveals interesting patterns:
 - Wickramaratne et al. (2022): Longitudinal studies consistently show social bonds predict lower depression risk. social connectedness is a “core determinant” of mental health, out-predicting many lifestyle factors.
 
 **Self Determination Theory:**
-•	Deci, E. L., & Ryan, R. M. (2000). “The What and Why of Goal Pursuits: Human Needs and the Self‑Determination of Behavior,” Psychological Inquiry, 11(4), 227‑268. Articulates basic psychological needs (autonomy, competence, relatedness).  ￼
-•	Ryan, R. M., & Deci, E. L. (2017). Self‑Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness. Guilford Press. Updated integration of theory across domains.  
+- Deci, E. L., & Ryan, R. M. (2000). “The What and Why of Goal Pursuits: Human Needs and the Self‑Determination of Behavior,” Psychological Inquiry, 11(4), 227‑268. Articulates basic psychological needs (autonomy, competence, relatedness).  ￼
+- Ryan, R. M., & Deci, E. L. (2017). Self‑Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness. Guilford Press. Updated integration of theory across domains.  
 ￼
 **Key Insights:**
 1. **Intrinsic vs Extrinsic Motivation**: Vectors representing basic psychological needs (autonomy, competence, relatedness) consistently outperformed socially constructed goals
