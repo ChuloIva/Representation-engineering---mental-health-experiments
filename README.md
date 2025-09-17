@@ -72,7 +72,7 @@ Where prefixes include: "my day today was", "I really like...", "next week I'll.
 
 ### Step 3: Cognitive Pairs Testing
 
-![Cognitive Pairs](screens/Cognitive%20pairs.png)
+![Cognitive Pairs](assets/screenshots/screens/Cognitive%20pairs.png)
 
 We tested 30+ conceptual pairs spanning different life domains:
 
@@ -88,7 +88,7 @@ We tested 30+ conceptual pairs spanning different life domains:
 
 ### Step 4: Evaluation Framework
 
-![Questions](screens/Questions.png)
+![Questions](assets/screenshots/screens/Questions.png)
 
 The model answered 25 depression-related questions under different vector strengths, covering:
 - Mood and emotional patterns
@@ -97,7 +97,7 @@ The model answered 25 depression-related questions under different vector streng
 - Coping strategies and social connections
 - Future outlook and uncertainty handling
 
-![LLM as Judge Prompt](screens/LLm%20as%20judge%20prompt.png)
+![LLM as Judge Prompt](assets/screenshots/screens/LLm%20as%20judge%20prompt.png)
 
 Responses were evaluated using:
 - Specialized sentiment analysis model
@@ -108,12 +108,12 @@ Responses were evaluated using:
 
 ### First Finding: Intrinsic Motivation Outperforms Extrinsic Motivation
 
-![All metrics intrinsic vs extrinsic pairs](screens/image.png)
+![All metrics intrinsic vs extrinsic pairs](assets/screenshots/screens/image.png)
 
 **Intrinsic vs Extrinsic Motivation**: Vectors representing basic psychological needs (autonomy, competence, relatedness) consistently outperformed socially constructed goals. This suggests that interventions targeting intrinsic motivators—such as fostering a sense of belonging, mastery, and autonomy—are more effective at improving mood and adaptive thinking in LLM outputs than those focused on extrinsic or socially constructed goals like fame or appearance. The results reinforce the importance of self-determination theory in both human and model-based interventions, highlighting that addressing core psychological needs yields more robust and generalizable improvements.
 
 ### Second Finding: Social Connection Dominates
-![Community Best](screens/community%20best.png)
+![Community Best](assets/screenshots/screens/community%20best.png)
 
 The **Alienation/Isolation vs Community/Engagement** vector emerged as the most effective intervention, showing:
 - Consistent improvement across all vector strengths
@@ -122,7 +122,7 @@ The **Alienation/Isolation vs Community/Engagement** vector emerged as the most 
 
 ### Performance Patterns by Vector Type
 
-![Mean Lines Plot](screens/Meanlines%206%20plot.png)
+![Mean Lines Plot](assets/screenshots/screens/Meanlines%206%20plot.png)
 
 **Top Performers (Basic Psychological Needs):**
 1. **Community/Engagement** - Sustained high performance
@@ -136,7 +136,7 @@ The **Alienation/Isolation vs Community/Engagement** vector emerged as the most 
 
 ### Detailed Analysis
 
-![Heatmap](screens/Heatmap%20LLMas%20judge.png)
+![Heatmap](assets/screenshots/screens/Heatmap%20LLMas%20judge.png)
 
 The heatmap analysis reveals interesting patterns:
 - **Community/Engagement** shows consistent high scores across all evaluation dimensions
@@ -144,7 +144,7 @@ The heatmap analysis reveals interesting patterns:
 - Socially constructed goals (Fame, Beauty, Competition) consistently underperform
 - Clear separation between intrinsic vs extrinsic motivation vectors
 
-![Combined Regression and Mean](screens/Plot%20reg%20and%20mean.png)
+![Combined Regression and Mean](assets/screenshots/screens/Plot%20reg%20and%20mean.png)
 
 ## Research Implications
 
