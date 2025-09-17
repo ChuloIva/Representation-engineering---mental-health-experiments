@@ -1,8 +1,59 @@
-# 🧠 Mental Health Representation Engineering Experiments
+# 🧠 Cognitive Representation Engineering Experiments
 
 ## Overview
 
 This project explores whether representation engineering can provide insights into mental health interventions by testing what conceptual directions improve responses from a fine-tuned depressive language model. The core hypothesis: different life domains and psychological concepts will have differential therapeutic effects beyond simple sentiment manipulation.
+
+## 📁 Repository Structure
+
+```
+cognitive-representation-experiments/
+├── 📊 notebooks/           # Analysis notebooks (numbered execution order)
+│   ├── 01-main-experiments/     # Core representation engineering
+│   ├── 02-baseline-analysis/    # Baseline model evaluation
+│   ├── 03-therapeutic-analysis/ # Therapeutic concept analysis
+│   ├── 04-judge-evaluation/     # LLM-as-judge evaluation
+│   ├── 05-regression-analysis/  # Statistical analysis
+│   └── 06-visualization/        # Data visualization
+├── 🔧 src/                 # Well-documented source code
+│   ├── data_processing/         # Embedding generation & clustering
+│   ├── evaluation/              # LLM judge evaluation tools
+│   ├── visualization/           # Interactive plotting tools
+│   └── utils/                   # Common utilities
+├── 🧪 experiments/         # Experiment configs & results
+│   ├── cognitive_pairs/         # Psychological concept pairs
+│   └── results/                 # Generated outputs
+├── 📊 data/               # Experimental data (gitignored)
+├── 🎨 assets/             # Documentation assets
+│   ├── screenshots/             # Result screenshots
+│   └── figures/                 # Generated figures
+└── 📚 docs/               # Detailed documentation
+```
+
+## 🚀 Quick Start
+
+### Prerequisites
+```bash
+pip install pandas numpy openai plotly umap-learn scikit-learn tqdm python-dotenv
+```
+
+### Environment Setup
+1. Create `.env` file with your OpenAI API key:
+   ```
+   OPENAI_API_KEY=your_key_here
+   ```
+
+### Running the Analysis
+1. **Main Experiments**: Start with `notebooks/01-main-experiments/representation_engineering_main.ipynb`
+2. **Explore Results**: Follow numbered notebook directories (01 → 06)
+3. **Generate Visualizations**: Use scripts in `src/visualization/`
+
+## 📖 Documentation
+
+- **Notebooks**: Each directory has detailed README with methodology
+- **Source Code**: Comprehensive docstrings and type hints
+- **Experiments**: Documented concept pairs and configurations
+- **Results**: Generated visualizations and statistical analysis
 
 ## Methodology
 
