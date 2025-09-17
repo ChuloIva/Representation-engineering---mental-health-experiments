@@ -29,8 +29,7 @@ venv.bak/
 figures/*.html
 
 # Data files (keep local but don't track changes)
-*.xlsx
-data/
+
 experiments/results/embeddings/
 experiments/results/visualizations/*.html
 
